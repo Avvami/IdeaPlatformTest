@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 data class GoodsEntity(
     @PrimaryKey val id: Int,
     val name: String,
-    val time: Int,
+    val time: Long,
     val tags: String,
     val amount: Int
 )

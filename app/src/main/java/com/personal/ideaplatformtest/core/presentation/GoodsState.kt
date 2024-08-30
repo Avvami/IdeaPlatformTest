@@ -1,7 +1,7 @@
 package com.personal.ideaplatformtest.core.presentation
 
-import com.personal.ideaplatformtest.core.data.local.GoodsEntity
+import com.personal.ideaplatformtest.core.domain.models.GoodsInfo
 
 data class GoodsState(
-    val goods: List<GoodsEntity> = emptyList()
+    val goods: List<GoodsInfo> = emptyList()
 )

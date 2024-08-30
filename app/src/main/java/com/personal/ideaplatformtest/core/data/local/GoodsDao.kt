@@ -10,9 +10,9 @@ interface GoodsDao {
     @Query("SELECT * FROM item")
     fun getGoods(): Flow<List<GoodsEntity>>
 
-    @Query("UPDATE item SET amount = :amount")
-    fun setGoodsAmount(amount: Int)
+    @Query("UPDATE item SET amount = :amount WHERE id = :id ")
+    suspend fun setGoodsAmount(id: Int, amount: Int)
 
     @Query("DELETE FROM item WHERE id = :id")
-    fun deleteGoods(id: Int)
+    suspend fun deleteGoods(id: Int)
 }

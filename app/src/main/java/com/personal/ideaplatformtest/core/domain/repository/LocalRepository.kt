@@ -1,13 +1,13 @@
 package com.personal.ideaplatformtest.core.domain.repository
 
-import com.personal.ideaplatformtest.core.data.local.GoodsEntity
+import com.personal.ideaplatformtest.core.domain.models.GoodsInfo
 import kotlinx.coroutines.flow.Flow
 
 interface LocalRepository {
 
-    fun getGoods(): Flow<List<GoodsEntity>>
+    fun getGoods(): Flow<List<GoodsInfo>>
 
-    fun setGoodsAmount(amount: Int)
+    suspend fun setGoodsAmount(id: Int, amount: Int)
 
-    fun deleteGoods(id: Int)
+    suspend fun deleteGoods(id: Int)
 }
